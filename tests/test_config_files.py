@@ -1,9 +1,10 @@
-import pathlib
+from pathlib import Path
 import unittest
 import tomlkit
-from config_pearl import tests
+from config_stp import tests
 import astropy
 
+CONFIGS_PATH = Path(config_project_template.__file__).parent / "configs"
 
 class TestConfigs(TestCase):
     "Tests for psd_utils."
