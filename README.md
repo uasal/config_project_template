@@ -1,14 +1,11 @@
-# config_tool_template
+# config_project_template
 Example of a configuration repository that is used with a specific simulation tool (or group of tools).
 
 The naming convention should be config_project_toolname. So a hypothetical example could be `config_hubble_acs`.
 
 The directory structure is designed as follows:
 
-- Configuration parameters that are common to all tools in the repository belong in the `common.toml` file. 
-- There should be one directory per tool (e.g. tool1, tool2) within the `configs` directory. 
-  Note that in many cases there may be only a single tool per configuration repository, which is acceptable.
-
+- Configuration parameters that are common to all tools in the repository belong in the `common_params.toml` file. 
 - A separate directory (should be named the same as the repo) is needed for python packaging (`config_project_template`).
 - All tool configs must have an `_init.toml` file which contains the default set of parameters for that tool.
 - Config files must contain both values and units. 
