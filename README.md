@@ -9,7 +9,7 @@ The directory structure is designed as follows:
 - There should be one directory per tool (e.g. tool1, tool2) within the `configs` directory. 
   Note that in many cases there may be only a single tool per configuration repository, which is acceptable.
 
-- A separate directory (should be named the same as the repo) is needed for python packaging (`config_project`).
+- A separate directory (should be named the same as the repo) is needed for python packaging (`config_project_template`).
 - All tool configs must have an `_init.toml` file which contains the default set of parameters for that tool.
 - Config files must contain both values and units. 
   - Units shall utilize the astropy format.
@@ -32,9 +32,6 @@ beamrad = 0.4 # fractional beam radius
 
 #. How do I find all the configuration repositories?
 - Search Github repos and GitLab repositories for anything named `config_`
-
-#. Does my tool require a separate configuration repository?
-- In cases where your tool is being used to conduct analyses or is related to the determination of budgets or requirements then it is advised to have a separate configuration repository that contains the defaults which should be called
 
 #. Why/When should config files be stored separately from the code?
 - Facilitates easy versioning (and impact assessment) between code changes and config changes
@@ -69,7 +66,7 @@ Good question! This is currently being explored. They can be left blank for now.
   This occurs when either additional mandatory keywords are required or removed.
   This cannot be implemented because the tools are not utilizes schemas for configuration and therefore config files cannot be validated against versions of the schemas.
 
-#. Should I use [sematic versioning](https://semver.org/)? 
+#. Should I use [semantic versioning](https://semver.org/)? 
 Generally not as only major revisions require version bumps.
 
 
