@@ -2,8 +2,7 @@
 # It generally contains all the baselined details of the instrument that always apply.
 
 [Sensor]
-CMOS_QE = "sensors/ZWO_ASI6200MM/ZWO_ASI6200MM_Pro_QE_curve.fits"
-CMOS_dark = "sensors/ZWO_ASI6200MM/ZWO_ASI6200MM_Pro_Dark_Current_vs_Sensor_Temperature.csv"
+CMOS_QE = "$UASAL_ARCHIVE/example/path/from/repo/to/file/ZWO_ASI6200MM_Pro_QE_curve.fits"
 CMOS_gain = 4
 CMOS_read = 3  # [electrons]
 CMOS_well = 50000 # [electrons]
