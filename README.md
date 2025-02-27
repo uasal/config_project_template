@@ -24,49 +24,12 @@ npix = 4096 # number of pixels per frame
 beamrad = 0.4 # fractional beam radius
 ```
 
+## Configuration Management
+Refer to the [UASAL Configuration Management Summary](https://github.com/uasal/lab_documents/blob/main/computing/development_guide/configuration_management.md) for additionally details on how analysis, simulation tools, and configuration repositories are structured within the UASAL GitHub organization.
 
-## Configuration FAQ
+For Configuration FAQ's, also defer to the [UASAL Configuration Management Summary](https://github.com/uasal/lab_documents/blob/main/computing/development_guide/configuration_management.md) for more information.
 
-#. How do I find all the configuration repositories?
-- Search Github repos and GitLab repositories for anything named `config_`
-
-#. Why/When should config files be stored separately from the code?
-- Facilitates easy versioning (and impact assessment) between code changes and config changes
-- Single configs can/should be usable with different versions/branches/tags
-- Multiple people (or instances) can use them without permission from the code owners
-- Allows for rapid automated unit testing that verifies file is readable/parse-able so you don’t accidentally break your or someone else’s code
-- Allows for configurations that are specific to a site/machine/setup
-
-#. Where should I put the configuration for my tool?
-- If your tool is often used in combination with another tool, then it may make sense to share a configuration directory, otherwise it should be separate.
-
-#. Do ALL configuration repositories need to be packages? 
-- No, but it may be useful.
-- We do require for traceability in reporting, which means we need to know which tags/versions you were running, and how your simulation was configured, so what is most important is that your config repo is maintained and versioned correctly. 
-
-- Advantages to python packages: can rely on your environment to take care of directory management
-  - Allows functionality to be built into package and shared between users.
-- Advantages to repos with just files: 
-  - Easier to maintain, must hard code a repo (bad), or set an environment variable (less bad), then execute system commands from within a python script/notebook.
-   Currently doing this in psd_utils to detect if stp_reference data is dirty.
-
-#. Config files mention filenames, where should those files be located?
-- They should reside in the `support_data` directory.
-  Note that in many cases the support data will contain files managed by [gitlfs](https://git-lfs.com/).
-
-#. Do filenames or paths in config files require a unit?
-Good question! This is currently being explored. They can be left blank for now.
-
-#. When should the configuration version be augmented?
-- configuration versions are not currently tracked. 
-- Normally, when the code is no longer backwards compatible and the format for the file no longer applies.
-  This occurs when either additional mandatory keywords are required or removed.
-  This cannot be implemented because the tools are not utilizes schemas for configuration and therefore config files cannot be validated against versions of the schemas.
-
-#. Should I use [semantic versioning](https://semver.org/)? 
-Generally not as only major revisions require version bumps.
-
-
+------------
 
 <!-- This code uses ``pre-commit`` to check yaml file syntax, maintain ``black`` formatting, and check ``flake8`` compliance.
 To enable this, run the following commands once (the first removes the previous pre-commit hook)::
