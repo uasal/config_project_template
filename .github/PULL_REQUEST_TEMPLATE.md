@@ -5,7 +5,7 @@ _Add a brief description of what this Pull Request encompasses._
 _List bullet points of what changes were done._
 
 ## Related Issues
-_List any issues this Pull Request relates too in order to tie issues with Pull Requests.
+_List any issues this Pull Request relates too in order to tie issues with Pull Requests._
 
 ## Testing Performed
 _List any related testing that was preformed or direct to an issue that has this information. Remove this section as needed._
