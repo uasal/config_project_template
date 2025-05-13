@@ -1,6 +1,6 @@
-import os
 from pathlib import Path
 from utils_config import ConfigLoader
+
 
 def load_config_values(value="raw", return_loader=False):
     package_root = Path(__file__).parent.resolve()
@@ -12,6 +12,6 @@ def load_config_values(value="raw", return_loader=False):
     loader = ConfigLoader(str(config_dir), value, recursive=True)
     loader.load_configs()
     if return_loader:
-        return loader # return to grant access to methods like validate_astropy() 
+        return loader  # return to grant access to methods like validate_astropy()
     else:
-        return loader.config_data # return just the data (default)
+        return loader.config_data  # return just the data (default)
