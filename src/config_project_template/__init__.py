@@ -3,7 +3,8 @@ from .config_loader import load_config_values
 from pathlib import Path
 
 # Edit 'config_project_template' to the appropriate repo/tool name here
-__version__ = importlib.metadata.version(__package__ or "config_project_template") 
+__version__ = importlib.metadata.version(__package__ or "config_project_template")
+
 
 def get_data_path():
     package_root = Path(__file__).parent.resolve()
@@ -13,5 +14,6 @@ def get_data_path():
         raise FileNotFoundError(f"Support data directory not found: {data_path}")
 
     return str(data_path)
+
 
 __all__ = ["load_config_values", "get_data_path", "__version__"]
