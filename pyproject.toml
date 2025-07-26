@@ -14,6 +14,9 @@ dependencies = [
 ]
 dynamic = ["version"]
 
+[dependency-groups]
+test = ["pytest>8", "pytest-mock"]
+
 # Edit this section with URLs for the README.md, CHANGELOG.md, and repository.
 [project.urls]
 Homepage = "https://github.com/uasal/config_project_template/blob/main/README.md" 

@@ -9,6 +9,8 @@ For Configuration FAQ's, also defer to the [UASAL Configuration Management Summa
 ## Dependencies
 All UASAL config packages are dependent on [utils_config](https://github.com/uasal/utils_config) but will be automatically installed when installing this package.
 
+For unit testing, the test group must be specified when pip installing.
+
 ## Installation
 ssh keys are required for the pip-based install. Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
 
@@ -29,6 +31,15 @@ git clone git@github.com:uasal/config_project_template.git
 cd config_project_template
 pip install .
 ```
+
+### Pip-install for unit testing and development
+The test group of dependencies should be installed for running unit tests.
+In the event of wanting to install as an editable package, the `-e .` should also be specified.
+
+```sh
+pip install --group test -e . 
+```
+
 
 ## Usage
 

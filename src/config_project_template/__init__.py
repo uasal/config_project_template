@@ -1,6 +1,7 @@
 import importlib.metadata
 from .config_loader import load_config_values
 from pathlib import Path
+from .config_verify import verify
 
 # Edit 'config_project_template' to the appropriate repo/tool name here
 __version__ = importlib.metadata.version(__package__ or "config_project_template")

@@ -1,15 +1,9 @@
 # this machine readable TOML file defines the common parameters between all tools in this repo.
 # It generally contains all the baselined details of the instrument that always apply.
 
-[Sensor]
-CMOS_QE = "$UASAL_ARCHIVE/example/path/from/repo/to/file/ZWO_ASI6200MM_Pro_QE_curve.fits"
-CMOS_gain = 4
-CMOS_read = 3  # [electrons]
-CMOS_well = 50000 # [electrons]
-
-[Pupils]  # This should moved to stp_reference_data
+[Pupils]  
 aper_clear_OD = '5m' # Outer diameter of clear aperture on M1
-D_chB_clear_OD = '2m' # Inner diameter of clear aperture on M1
+m1_psd_B = 3.0
 
 [sim_settings]  # settings for simulation tool
 npix = 4096 # number of pixels per frame
