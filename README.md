@@ -27,7 +27,7 @@ pip install git+ssh://git@github.com/uasal/config_project_template.git
 ```sh
 git clone git@github.com:uasal/config_project_template.git
 cd config_project_template
-pip install .
+pip install -e .
 ```
 
 ## Usage
