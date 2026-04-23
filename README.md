@@ -35,7 +35,8 @@ pip install .
 Included in this repository is an [example notebook] of how an analysis would make use of this (and other) configuration repositories.
 What is included in this readme is only a brief summary.
 
-config_stp makes usage of the ConfigLoader class (as *config_loader*) from utils_config via the `load_config_values` method, which accepts 'raw' 'parsed' or 'unitless' as an argument, returning a dictionary after parsing the 'configs' directory for .toml filies
+`config_project_template`makes usage of the ConfigLoader class (as *config_loader*) from utils_config via the `load_config_values` method, which accepts 'raw' 'parsed' or 'unitless' as an argument, returning a dictionary after parsing the 'configs' directory for .toml files
+
 ```python
 import config_project_template
 data = config_project_template.load_config_values()
