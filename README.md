@@ -10,7 +10,8 @@ For Configuration FAQ's, also defer to the [UASAL Configuration Management Summa
 All UASAL config packages are dependent on [utils_config](https://github.com/uasal/utils_config) but will be automatically installed when installing this package.
 
 ## Installation
-ssh keys are required for the pip-based install. Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
+If the repository is not public, then ssh keys are required for the pip-based install.
+Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
 
 If there is no intention of modifying any of the configuration files inside the repository and analyzing the results, you can simply pip install the package.
 
@@ -18,6 +19,12 @@ In the event that you wish to interact with the files in the package, which may 
 
 ### Pip-based install
 
+If the repository is publicly accessible, then installation can use:
+```sh
+pip install git+https://github.com/uasal/config_project_template.git
+```
+
+If ssh authentication is required, then you can install via:
 
 ```sh
 pip install git+ssh://git@github.com/uasal/config_project_template.git
