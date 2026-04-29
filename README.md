@@ -46,7 +46,7 @@ In the event that you wish to interact with the files in the package, which may 
 <!-- Update pip install for your package -->
 If the repository is publicly accessible, then installation can use:
 ```sh
-pip install git+ssh://git@github.com/uasal/config_project_template.git
+pip install git+https://github.com/uasal/config_project_template.git
 ```
 
 If ssh authentication is required, then you can install via:
