@@ -1,0 +1,9 @@
+# Listing of default reviewers for repo files
+
+# Owners listed below will be the default owners for everything in the repo.
+# Example format shown below:
+# *  @sfrinaldi 
+
+# Set reviewers for changes to the ci .yml files
+/.github/*.yml @uasal/ci-reviewers
+/.github/workflows/*.yml @uasal/ci-reviewers
