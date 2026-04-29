@@ -44,13 +44,27 @@ In the event that you wish to interact with the files in the package, which may 
 ### Pip-based install
 
 <!-- Update pip install for your package -->
+If the repository is publicly accessible, then installation can use:
 ```sh
 pip install git+ssh://git@github.com/uasal/config_project_template.git
+```
+
+If ssh authentication is required, then you can install via:
+```sh
+pip install git+ssh://git@github.com/uasal/config_project_template.git`
 ```
 
 ### Installed via cloning
 
 <!-- Update git clone cmd for your package -->
+If the repository is publicly accessible:
+```sh
+git clone https://github.com/uasal/config_project_template.git
+cd config_project_template
+pip install .
+```
+
+If ssh authentication is required:
 ```sh
 git clone git@github.com:uasal/config_project_template.git
 cd config_project_template
