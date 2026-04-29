@@ -1,4 +1,5 @@
 # config_project_template
+
 This is a template of a configuration repository that is used with a specific simulation tool (or group of tools).
 
 <!-- 
@@ -21,16 +22,19 @@ Content Items:
 -->
 
 ## Configuration Management
+
 Refer to the [UASAL Configuration Management Summary](https://github.com/uasal/lab_documents/blob/main/computing/development_guide/configuration_management.md) for additionally details on how analysis, simulation tools, and configuration repositories are structured within the UASAL GitHub organization.
 
 For Configuration FAQ's, also defer to the [UASAL Configuration Management Summary](https://github.com/uasal/lab_documents/blob/main/computing/development_guide/configuration_management.md) for more information.
 
 ## Dependencies
+
 All UASAL config packages are dependent on [utils_config](https://github.com/uasal/utils_config) but will be automatically installed when installing this package.
 
 ## Installation
-ssh keys are required for the pip-based install. Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
+
 <!-- Verify this is correct when using this template / update if GitLab -->
+ssh keys are required for the pip-based install. Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
 
 If there is no intention of modifying any of the configuration files inside the repository and analyzing the results, you can simply pip install the package.
 
@@ -38,27 +42,28 @@ In the event that you wish to interact with the files in the package, which may 
 
 ### Pip-based install
 
-
+<!-- Update pip install for your package -->
 ```sh
 pip install git+ssh://git@github.com/uasal/config_project_template.git
 ```
-<!-- Update pip install for your package -->
 
 ### Installed via cloning
+
+<!-- Update git clone cmd for your package -->
 ```sh
 git clone git@github.com:uasal/config_project_template.git
 cd config_project_template
 pip install .
 ```
-<!-- Update git clone cmd for your package -->
-
 
 ## Usage
 
-Included in this repository is an [example notebook] of how an analysis would make use of this (and other) configuration repositories.
+Included in this repository is an [example notebook](notebooks/example.ipynb) of how an analysis would make use of this (and other) configuration repositories.
 What is included in this readme is only a brief summary.
 
-config_stp makes usage of the ConfigLoader class (as *config_loader*) from utils_config via the `load_config_values` method, which accepts 'raw' 'parsed' or 'unitless' as an argument, returning a dictionary after parsing the 'configs' directory for .toml filies
+This package makes usage of the ConfigLoader class (as *config_loader*) from utils_config via the `load_config_values` method, which accepts 'raw' 'parsed' or 'unitless' as an argument, returning a dictionary after parsing the 'configs' directory for .toml files
+
+<!-- Update the code block for your package name -->
 ```python
 import config_project_template
 data = config_project_template.load_config_values()
@@ -70,7 +75,10 @@ load_config_values() has a default argument of 'raw' or alternatively pass in on
 - `load_config_values('parsed')` -> {'value': 0.01, 'unit': 'arcsecond'}
 - `load_config_values('raw')` -> 10e-3arcsecond
 
-For importing data and keeping code consistent across installs, config_stp will return the path to support_data with `get_data_path()`
+<!-- Update config_project_template with your package name -->
+For importing data and keeping code consistent across installs, *config_project_template* will return the path to support_data with `get_data_path()`
+
+<!-- Update config_project_template with your package name -->
 ```python
 import config_project_template
 data_path = config_project_template.get_data_path()
