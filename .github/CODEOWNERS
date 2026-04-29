@@ -6,4 +6,4 @@
 
 # Set reviewers for changes to the ci .yml files
 /.github/*.yml @uasal/ci-reviewers
-/.github/workflows/*.yml @uasal/ci-reviewers
+/.github/workflows/ @uasal/ci-reviewers
