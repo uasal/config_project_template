@@ -34,7 +34,8 @@ All UASAL config packages are dependent on [utils_config](https://github.com/uas
 ## Installation
 
 <!-- Verify this is correct when using this template / update if GitLab -->
-ssh keys are required for the pip-based install. Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
+If the repository is not public, then ssh keys are required for the pip-based install.
+Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
 
 If there is no intention of modifying any of the configuration files inside the repository and analyzing the results, you can simply pip install the package.
 
