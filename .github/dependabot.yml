@@ -4,8 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-    reviewers:
-      - uasal/ci-reviewers
     labels:
       - "ci"
       - "dependencies"
