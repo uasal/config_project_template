@@ -1,6 +1,25 @@
 # config_project_template
 This is a template of a configuration repository that is used with a specific simulation tool (or group of tools).
 
+<!-- 
+IMPORTANT NOTE: 
+
+When using this template, update at least the following locations with the name of your package instead of 'config_project_template'. Files listed will have comments that guide you to what content to change.
+
+Package Related Items (To Update Names)
+- README.md (This file)
+- src/config_project_template
+  - Rename to your package name
+- pyproject.toml
+- src/config_project_template/__init__.py
+
+Content Items:
+- src/'package_name'/configs/*.toml
+- src/'package_name'/support_data/*
+  - When applicable 
+  
+-->
+
 ## Configuration Management
 Refer to the [UASAL Configuration Management Summary](https://github.com/uasal/lab_documents/blob/main/computing/development_guide/configuration_management.md) for additionally details on how analysis, simulation tools, and configuration repositories are structured within the UASAL GitHub organization.
 
@@ -11,6 +30,7 @@ All UASAL config packages are dependent on [utils_config](https://github.com/uas
 
 ## Installation
 ssh keys are required for the pip-based install. Verify you have ssh keys installed in GitHub, or check out this [ssh key tutorial](https://github.com/uasal/lab_documents/blob/main/ssh_key_tutorial.md)
+<!-- Verify this is correct when using this template / update if GitLab -->
 
 If there is no intention of modifying any of the configuration files inside the repository and analyzing the results, you can simply pip install the package.
 
@@ -22,6 +42,7 @@ In the event that you wish to interact with the files in the package, which may 
 ```sh
 pip install git+ssh://git@github.com/uasal/config_project_template.git
 ```
+<!-- Update pip install for your package -->
 
 ### Installed via cloning
 ```sh
@@ -29,6 +50,8 @@ git clone git@github.com:uasal/config_project_template.git
 cd config_project_template
 pip install .
 ```
+<!-- Update git clone cmd for your package -->
+
 
 ## Usage
 
@@ -53,4 +76,3 @@ import config_project_template
 data_path = config_project_template.get_data_path()
 print(data_path)
 ```
-
